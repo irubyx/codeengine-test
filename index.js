@@ -9,6 +9,7 @@ const HOST = "0.0.0.0"
 const app = express()
 app.get("/", async (req, res) => {
     const { data: response } = await axios.get(process.env.URL)
+    console.log(response)
     res.send(response)
 })
 
